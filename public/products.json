@@ -1,0 +1,56 @@
+[
+  {
+  	"id": "1",
+  	"name": "FH-001",
+  	"price": "3500",
+  	"img": "fur-1.jpg"
+  },
+  {
+  	"id": "2",
+  	"name": "FH-002",
+  	"price": "2500",
+  	"img": "fur-2.jpg"
+  },
+  {
+  	"id": "3",
+  	"name": "FH-003",
+  	"price": "3000",
+  	"img": "fur-3.jpg"
+  },
+  {
+  	"id": "4",
+  	"name": "FH-004",
+  	"price": "20000",
+  	"img": "fur-4.jpg"
+  },
+  {
+  	"id": "5",
+  	"name": "FH-005",
+  	"price": "4000",
+  	"img": "fur-5.jpg"
+  },
+  {
+  	"id": "6",
+  	"name": "FH-006",
+  	"price": "5000",
+  	"img": "fur-6.jpg"
+  },
+  {
+  	"id": "7",
+  	"name": "FH-007",
+  	"price": "25000",
+  	"img": "fur-7.jpg"
+  },
+  {
+  	"id": "8",
+  	"name": "FH-008",
+  	"price": "2800",
+  	"img": "fur-8.jpg"
+  },
+  {
+  	"id": "9",
+  	"name": "FH-009",
+  	"price": "2000",
+  	"img": "fur-9.jpg"
+  }
+]
