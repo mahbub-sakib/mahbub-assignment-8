@@ -1,5 +1,7 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
+import Furniture from '../Furniture/Furniture';
+import './Mela.css';
 
 const Mela = () => {
     const [furnitures, setFurnitures] = useState([]);
@@ -11,10 +13,13 @@ const Mela = () => {
     console.log(furnitures);
     return (
         <div>
-            <h1>mela e jai re!</h1>
             <div className='main-container'>
                 <div className='furniture-container'>
+                    {furnitures.map(furniture => <Furniture
+                        key={furniture.id}
+                        furniture={furniture}
 
+                    ></Furniture>)}
                 </div>
                 <div className='cart-container'>
 
