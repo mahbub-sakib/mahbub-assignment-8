@@ -36,16 +36,17 @@ const Mela = () => {
                     ></Furniture>)}
                 </div>
                 <div className='cart-container'>
-                    <div>
-                        <h2>Selected Furnitures</h2>
-                        {
-                            cart.map(furniture => <Cart
-                                key={furniture.id}
-                                furniture={furniture}
-                            >
-                            </Cart>)
-                        }
-                    </div>
+                    <h2>Selected Furnitures</h2>
+                    {
+                        cart.map(furniture => <Cart
+                            key={furniture.id}
+                            furniture={furniture}
+                        >
+                        </Cart>)
+                    }
+                    <button>Choose 1 For Me {cart.length}</button>
+                    <br />
+                    <button>Choose Again</button>
                 </div>
             </div>
         </div>
