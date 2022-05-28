@@ -1,0 +1,15 @@
+.cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0px;
+}
+
+.btn-trash {
+    margin-left: 15px;
+}
+
+.cart h5 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

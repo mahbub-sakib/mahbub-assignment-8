@@ -17,6 +17,10 @@ const Mela = () => {
     const addToCart = (selectedFurniture) => {
         let newCart = [];
         const prodcutFound = cart.find(product => product.id === selectedFurniture.id);
+        if (cart.length > 3 && !prodcutFound) {
+            alert('No more than 4 products!');
+            return;
+        }
         if (!prodcutFound) {
             newCart = [...cart, selectedFurniture];
         }
@@ -26,10 +30,22 @@ const Mela = () => {
         setCart(newCart);
     }
 
+    const removeFromCart = (selectedFurniture) => {
+        let newCart = [];
+        const prodcutFound = cart.find(product => product.id === selectedFurniture.id);
+        if (prodcutFound) {
+            const rest = cart.filter(product => product.id !== selectedFurniture.id);
+            newCart = [...rest];
+        }
+        setCart(newCart);
+    }
+
     const chooseProduct = (chosenProducts) => {
-        const names = chosenProducts.map(product => product.name);
-        const random = Math.floor(Math.random() * names.length);
-        alert('Lucky furniture name: ' + names[random]);
+        if (chosenProducts.length > 0) {
+            const names = chosenProducts.map(product => product.name);
+            const random = Math.floor(Math.random() * names.length);
+            alert('Lucky furniture name: ' + names[random]);
+        }
     }
 
     const chooseAgain = () => {
@@ -51,6 +67,7 @@ const Mela = () => {
                         cart.map(furniture => <Cart
                             key={furniture.id}
                             furniture={furniture}
+                            removeFromCart={removeFromCart}
                         >
                         </Cart>)
                     }
