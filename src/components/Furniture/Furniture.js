@@ -1,8 +1,10 @@
 import React from 'react';
 import './Furniture.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCartPlus } from '@fortawesome/free-solid-svg-icons';
 
 const Furniture = (props) => {
-    const { furniture } = props;
+    const { furniture, addToCart } = props;
     const { id, name, price, img } = furniture;
     // console.log(img);
     const imgPath = './images/';
@@ -11,7 +13,14 @@ const Furniture = (props) => {
             <img src={imgPath + img} alt="" />
             <h2>Name: {name}</h2>
             <h3>Price: {price}</h3>
-            <button className='btn-cart'>Add to Cart</button>
+            <div className='btn-cart-section' onClick={() => addToCart(furniture)}>
+                <button className='btn-cart'>
+                    <p><strong>Add to Cart</strong> </p>
+                </button>
+                <FontAwesomeIcon icon={faCartPlus}></FontAwesomeIcon>
+            </div>
+
+
         </div>
     );
 };
