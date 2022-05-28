@@ -8,7 +8,6 @@ const Cart = (props) => {
         <div className='cart'>
             {
                 <h5>{furniture.name}</h5>
-
             }
         </div>
     );

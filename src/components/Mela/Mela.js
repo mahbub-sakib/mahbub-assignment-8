@@ -31,6 +31,10 @@ const Mela = () => {
         const random = Math.floor(Math.random() * names.length);
         alert('Lucky furniture name: ' + names[random]);
     }
+
+    const chooseAgain = () => {
+        setCart([]);
+    }
     return (
         <div>
             <div className='main-container'>
@@ -52,7 +56,7 @@ const Mela = () => {
                     }
                     <button className='btn-summary' onClick={() => chooseProduct(cart)}>Choose 1 For Me</button>
                     <br />
-                    <button className='btn-summary'>Choose Again</button>
+                    <button className='btn-summary' onClick={() => chooseAgain()}>Choose Again</button>
                 </div>
             </div>
         </div>
