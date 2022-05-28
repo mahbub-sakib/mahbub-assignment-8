@@ -17,7 +17,7 @@ const Furniture = (props) => {
                 <button className='btn-cart'>
                     <p><strong>Add to Cart</strong> </p>
                 </button>
-                <FontAwesomeIcon icon={faCartPlus}></FontAwesomeIcon>
+                <FontAwesomeIcon icon={faCartPlus} className='btn-cart'></FontAwesomeIcon>
             </div>
 
 
