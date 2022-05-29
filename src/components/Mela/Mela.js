@@ -77,15 +77,20 @@ const Mela = () => {
                 </div>
             </div>
             <div>
-                <h1>How React Works:</h1>
+                <h1>How React Works</h1>
                 <p>React JSX ব্যবহার করে আমাদের JavaScript এর ভিতরে HTML কোড লেখার সুযোগ করে দেয়। যদিও সেই HTML কোড গুলা আসল HTML element না, তবে JSX সেগুলোকে আসল HTML কোড এ রুপান্তর করে Rendering এর সময়।
                     React এ component ব্যবহার করার সুবিধা আছে, যেমন একটি website এ যে যে section গুলো দেখে মনে হবে similar in look different in data, সেগুলো একটি component এ রাখতে হয়। এছাড়াও চাইলে যে কোন section
                     ই component এ রাখা যায়, তবে মনে রাখতে হবে, React একমুখী ডেটা transfer করে (One-way Data Binding)। তাই component structure design এর সময় এই বিষয় টা মাথায় রাখতে হয়। DOM manipulate করার জন্য
                     React virtual DOM ব্যবহার করে, যেকোন code update এর জন্য যদি real DOM কে বার বার update করতে হয়, তাহলে overall Rendering process slow হবে। virtual DOM track রাখে code এর কোন অংশ টি update হয়েছে এবং কিভাবে
                     update করলে overall Rendering process fast হবে।
                 </p>
-
-
+                <h1>Props vs state</h1>
+                <p>এক component থেকে আরেক component এ data পাঠানোর জন্য Props ব্যবহার করা হয়। অন্য দিকে কোন একটা component এ dynamic changes rendering এর জন্য State ব্যবহার করা হয়।
+                    Props হল read-only। এর মানে একটা component এ যা Props হিসেবে আসে, তা আর change করা যায় না, change করতে গেলে error দিবে। State এর value asynchronous ভাবে change হয়।
+                    State এর default value set করা যায়, অন্যদিকে Props এর value আগের component থেকে নির্ধারণ করা হয়। একটা State যে component এ declare করা হয়েছে শুধুমাত্র ওই component এই ব্যবহার করা যায়, তার child or parent এ ওই State ব্যবহার করা যায় না।
+                    Props একটা component কে reusable করে, অন্যদিকে State কোন component কে reusable করতে পারে না। যখন মনে হবে একটা component এর কোন value user interaction এর মাধ্যমে update
+                    হওয়ার সম্ভাবনা আছে, তখন তার জন্য State declare করতে হয়। অন্যদিকে, কোন component এ Props পাঠাতেই হবে এমন বাধ্য বাধকতা নেই। এর মানে কোন component এ Props নাও থাকতে পারে।
+                </p>
             </div>
         </div>
     );
