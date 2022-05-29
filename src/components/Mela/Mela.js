@@ -76,6 +76,17 @@ const Mela = () => {
                     <button className='btn-summary' onClick={() => chooseAgain()}>Choose Again</button>
                 </div>
             </div>
+            <div>
+                <h1>How React Works:</h1>
+                <p>React JSX ব্যবহার করে আমাদের JavaScript এর ভিতরে HTML কোড লেখার সুযোগ করে দেয়। যদিও সেই HTML কোড গুলা আসল HTML element না, তবে JSX সেগুলোকে আসল HTML কোড এ রুপান্তর করে Rendering এর সময়।
+                    React এ component ব্যবহার করার সুবিধা আছে, যেমন একটি website এ যে যে section গুলো দেখে মনে হবে similar in look different in data, সেগুলো একটি component এ রাখতে হয়। এছাড়াও চাইলে যে কোন section
+                    ই component এ রাখা যায়, তবে মনে রাখতে হবে, React একমুখী ডেটা transfer করে (One-way Data Binding)। তাই component structure design এর সময় এই বিষয় টা মাথায় রাখতে হয়। DOM manipulate করার জন্য
+                    React virtual DOM ব্যবহার করে, যেকোন code update এর জন্য যদি real DOM কে বার বার update করতে হয়, তাহলে overall Rendering process slow হবে। virtual DOM track রাখে code এর কোন অংশ টি update হয়েছে এবং কিভাবে
+                    update করলে overall Rendering process fast হবে।
+                </p>
+
+
+            </div>
         </div>
     );
 };
